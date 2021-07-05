@@ -1,8 +1,6 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
+
+/* .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
@@ -11,11 +9,16 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
+} */
+
+body {
+  background-color: #263147;
+  text-align: center;
+  color: white;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  min-height: 60vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,11 +31,20 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
+.nasa-logo {
+  height: 250px;
+}
+
+.api-picture {
+  width: 80vw;
+  height: auto;
+}
+
+/* @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
-}
+} */
