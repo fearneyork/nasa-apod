@@ -1,13 +1,12 @@
 import { dateFormatter } from "../utils/date-formatter";
 import sadNasa from "../assets/sad_nasa.png"
 
-const SingleDateContent = ({content, date, isSingleDate}) => {
+const SingleDateContent = ({content, singleDate}) => {
     console.log(content);
     
     const latestDate = dateFormatter(new Date());
     const latestYear = +latestDate.slice(0, 4)
-    
-    const inputYear = +date.slice(0, 4)
+    const inputYear = +singleDate.slice(0, 4)
 
     let heading = "";
     let url = "";

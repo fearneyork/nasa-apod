@@ -1,24 +1,26 @@
 import { useState } from "react";
 
-const Search = ({setDate, setIsSingleDate, isSingleDate}) => {
+const Search = ({setSingleDate, setIsSingleDate, isSingleDate}) => {
     const [newDate, setNewDate] = useState("");
 
 
     return (
         <main>
-            <form>
+            <section>
                 <p>Please select a date option below.</p>
                 <button id="single-date" value="single date" className="get-image-button" onClick={(event) => {
                     event.preventDefault()
+                    console.log("SINGLE");
                     setIsSingleDate(true);
                 }}>Single Date</button>
                 
                 <button id="date-range" value="date range" className="get-image-button" onClick={(event) => {
                     event.preventDefault()
+                    console.log("MULTI");
                     setIsSingleDate(false);
                 }}>Date Range</button>
                 <br></br>
-            </form>
+            </section>
 
             <p>
             Enter the date you want to search for.
@@ -29,7 +31,8 @@ const Search = ({setDate, setIsSingleDate, isSingleDate}) => {
                     //to prevent page reload onClick
                     event.preventDefault()
                     //sets original date state from App.js to newDate state
-                    setDate(newDate)
+                    setSingleDate(newDate)
+                    console.log(newDate);
                     }}>Get Image</button>
             </form>
         </main>
